@@ -49,7 +49,7 @@ function pushWord() {
 function shiftWord() {
   wordsArray.shift();
   addWords();
-  showmsg("shift(): Remove from the beginning of Array");
+  showmsg("shift(): Remove from the start of Array");
 }
 
 function unshiftWord() {
@@ -57,7 +57,7 @@ function unshiftWord() {
   if (wordToUnshift) {
     wordsArray.unshift(wordToUnshift);
     addWords();
-    showmsg("unshift(): Add in the beginning of Array");
+    showmsg("unshift(): Add in the start of Array");
   }
 }
 
@@ -66,6 +66,7 @@ function sliceArray() {
   const end = parseInt(prompt("Enter end index for slice:"), 10);
   wordsArray = wordsArray.slice(start, end);
   addWords();
+  showmsg("slice():  Modify the copy of an Array");
 }
 
 function spliceArray() {
@@ -78,6 +79,7 @@ function spliceArray() {
     ...wordToAdd.map((word) => word.trim())
   );
   addWords();
+  showmsg("splice(): Modify the original Array");
 }
 
 function showmsg(text) {
